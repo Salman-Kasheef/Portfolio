@@ -1,0 +1,446 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar-nav .nav-link {
+    font-size: 15px; /* Larger font size for navbar items */
+    
+}
+
+.navbar {
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    color: #ffffff;
+}
+
+.navbar ul li a {
+    color: #020202;
+    text-decoration: none;
+}
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-style: italic;
+    color: #fff; /* Set the color of the navbar items to white */
+    font-size: 0.7em; /* Set the font size of the navbar items */
+    padding: 0.5rem 1rem; /* Adjust the padding of the navbar items */
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 1.0em;
+    padding: 0.5rem 1rem; 
+    color: #0511f3; /* Set the color of the navbar items on hover */
+}
+.navbar ul li a:hover {
+    color: #3498db;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.bg-video {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.header-content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.header-content h {
+    color: #1c71c0;
+}
+.header-content h1 {
+    color: #fff;
+    font-size: 5.5rem;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+.content {
+    padding-top: 70px; /* Adjust as needed */
+}
+
+.header-content p {
+    font-family: cursive;
+    color: #fff;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    /* margin-bottom: 20px; */
+}
+
+header {
+    height: 100vh;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+}
+
+.social-media {
+    position: relative;
+    color: #e2e2e2;
+    margin-top: 20px;
+    z-index: 2;
+}
+.social-media img {
+    width: 40px;
+    margin:0 10px;
+}
+#about {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    z-index: 2; /* Ensure the about section is above the header content */
+}
+#about h1{
+    font-size: 22px ;
+    font-family:cursive;
+    color:#1c71c0;
+}
+
+#about .about-heading {
+    font-family: cursive; /* Stylish font family */
+    font-size: 36px; /* Larger font size */
+    color: #1c71c0; /* Font color */
+}
+#about h {
+    font-family: monospace;
+    color: #1708e1;
+}
+
+#about p {
+    font-family: monospace;
+    font-size: 17px;
+}
+.about-img {
+    
+    float: right;
+    width: 200px; /* Adjust image width */
+    height: 200px; /* Maintain aspect ratio */
+    margin-top: 20px; /* Add some top margin */
+}
+ #certifications, #contact {
+    padding: 50px 0;
+}
+
+ #work-experience h2, #projects h2, #certifications h2, #contact h2 {
+    margin-top: 0;
+}
+
+.skills-list, .experience-list, .project-list, .certification, .contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.certification img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.certification-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#skills {
+    background-color: #f7f4f4;
+    color: none;
+    text-align: center;
+    padding: 50px 0;
+}
+/* Skill section heading */
+#skills h2 {
+    font-family:cursive; /* Adjust font family */
+    font-size: 40px; /* Adjust font size */
+    text-align: center;
+    margin-bottom: 30px; /* Add some bottom margin */
+}
+
+.skill-heading {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.skill-logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin: 0 auto;
+    background: none;
+    transition: transform 0.1s ease-in-out;
+}
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.skill-name {
+    text-align: center;
+    font-family: monospace;
+    color: #1a2bdf;
+    transition: transform 0.1s ease-in-out;
+}
+.skill-name:hover ,
+.skill-logo:hover {
+    transform: scale(1.3); /* Increase the size on hover */
+}
+
+#work-experience {
+    background-color: #efefef;
+    color: #101010;
+    text-align: center;
+    padding: 50px 0;
+}
+#experienceList {
+    padding-left: 20px; /* Add left padding for bullet points */
+}
+
+#experienceList li {
+    color: #333; /* Change the color of the description */
+}
+
+.designation {
+    color: #5c95eb; 
+    font-family: monospace;
+    font-size: 28px;/* Blue color for the designation */
+}
+.description ul {
+    list-style-type: disc; /* Use bullets for the description */
+    padding-left: 20px; /* Adjust bullet position */
+}
+.date {
+    color: #2a2a28;
+    font-family: monospace;
+    margin-right: 20px; /* Align date to the right */
+}
+.company {
+    font-size:18px;
+    font-family:monospace;
+    color: #b03131;
+    /* float: left; Smaller font size for the company name */
+}
+
+.description {
+    margin-top: 20px; 
+    color: #000;
+    text-align: left;/* Add margin-top for description */
+    padding-left: 20px;
+    font-size: large;
+    font-family: cursive; /* Add left padding for bullets */
+}
+.experience-heading {
+    margin-bottom: 20px;
+    color: #2159e6;
+    font-size: 40px;
+    font-family: cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.experience-container {
+    border: 2px solid #0a0a0a; /* Blue border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.experience-item {
+    margin-bottom: 20px;
+}
+
+
+.project-img {
+    width: 300px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.project-container{
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.3s; 
+    background-color: #f5f5f5; /* Light gray background */
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.project-container:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+}
+.project-heading{
+    font-size: 50px;
+    font-family: cursive;
+    font-weight: bold;
+    color:#3498db;
+    margin-bottom:30px ;
+}
+.project-description {
+    margin-top: 20px;
+    text-align: left;
+}
+/* Your existing CSS code goes here */
+.certification-heading {
+    font-size: 50px;
+    font-family: cursive;
+    font-weight: bold;
+    color: #3498db; /* Blue color */
+    margin-bottom: 30px; /* Add space below the heading */
+}
+
+.certification-container {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.3s; 
+    background-color: #f5f5f5; /* Light gray background */
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;/* Add transition for hover effect */
+}
+
+.certification-img {
+    width: 100%;
+    height: auto; /* Set a fixed height for all certification images */
+    /* object-fit: cover; Ensure images maintain aspect ratio and cover the container */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+}
+
+.certification-description {
+    flex: 1; /* Allow the description to expand to fill available space */
+    padding-top: 10px; /* Add padding to the top */
+    text-align: center; /* Center align text */
+    overflow: hidden;
+    position: relative;/* Hide overflow */
+}
+
+.certification-container:hover {
+    transform: scale(1.1);  /* Change background color on hover */
+}
+.certification-container:hover .certification-details {
+    opacity: 1;
+    /* display: block; Show the details on hover */
+}
+.certification-details h3,
+.certification-details p {
+    /* Updated styles for certificate name and expiration */
+    margin: 5px 0; /* Add margin for spacing */
+    text-align: center; /* Center text */
+}
+.certification-details .btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.certification-details .btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+.certification-container:hover .certification-img {
+    color: #1708e1;
+    opacity: 0.5;
+    transform: scale(1.1);  /* Change text color on hover */
+}
+.certification-details {
+    display: none; /* Initially hide the details */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db; /* Semi-transparent background */
+    color: #ffff; /* Text color */
+    transition: opacity 0.3s ease; 
+    box-sizing: border-box; /* Smooth transition */
+}
+.certification-name {
+    color: #453d9c;
+    position: relative; /* Position relative for z-index */
+    z-index: 1; /* Ensure name is above details */
+    margin-top: 10px; /* Add some margin to separate from image */
+    text-align: center;
+}
+
+.certification-link {
+    position: relative; /* Position relative for z-index */
+    z-index: 1; /* Ensure button is above details */
+    display: block; /* Ensure button takes full width */
+    text-align: center; /* Center the button */
+    margin-top: 10px;
+}
+/* CSS code */
+.social-media img {
+    width: 30px;
+    margin: 0 3px;
+}
+
+#contact hr {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+.contact-heading {
+    color: #131313; /* Set the color to white */
+}
