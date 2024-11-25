@@ -46,31 +46,73 @@ function displaySkills() {
 // Work experience data
 const experiences = [
     { 
-        designation: 'Software Engineer (Backend Developer)', 
-        company: 'LTIMindtree,Bengaluru', 
+        designation: 'SDE 1', 
+        company: 'SWIFT', 
+        location: 'Bengaluru India', 
+        date: 'August 2024 - Present', 
+        description: ' Responsible for coding updates to resolve escalations related to customer or seller concerns through effective code modifications. \n Conducted local testing to validate code functionality using Postman, ensuring reliability and correctness prior to deployment. \n Attended daily stand-ups to discuss project progress and collaborated with team members in an agile environment to drive effective solutions. \n Managed and tracked assigned development tasks in JIRA, ensuring timely updates and efficient issue resolution. \n Developed and executed MongoDB queries for inserting new configuration data. \n Collaborated closely with frontend teams to ensure seamless integration of APIs and address UI-related requirements, contributing to an enhanced user experience.',
+        skills: ["Java 11", "Light4J", "MongoDB"]
+    },
+    { 
+        designation: 'Software Engineer', 
+        company: 'LTIMindtree', 
         location: 'Bengaluru India', 
         date: 'June 2022 - January 2024', 
-        description: ' Successfully implemented Microservices architecture using Spring Boot.  \n Optimized MySQL databases for efficient data storage and retrieval.\n Developed and maintained RESTful APIs for efficient communication between Microservices.\n Secured application using Spring Security with HmacSha256.\n Utilized Docker for containerization,streamlining deployment process, and ensuring consistency across different environments.\n Rapidly developed applications using Spring Boot and hosted on AWS.' 
+        description: ' Successfully implemented Microservices architecture using Spring Boot.  \n Optimized MySQL databases for efficient data storage and retrieval.\n Developed and maintained RESTful APIs for efficient communication between Microservices.\n Secured application using Spring Security with HmacSha256.\n Utilized Docker for containerization,streamlining deployment process, and ensuring consistency across different environments.\n Rapidly developed applications using Spring Boot and hosted on AWS.' ,
+        skills: ["Java", "MySQL", "Spring Boot"] 
     }
 ];
-// Function to display work experience
+
 function displayExperience() {
-    const experienceContainer = document.querySelector('.experience-container');
-    experiences.forEach(exp => {
-        const experienceItem = document.createElement('div');
-        experienceItem.classList.add('experience-item');
-        experienceItem.innerHTML = `
-            <div class="designation">${exp.designation}</div>
-            <div class="details">
-                 <div class="company">${exp.company}</div>
-                 <div class="date">${exp.date}</div>
-            </div>
-            <div class="description">
-                ${exp.description.split('\n').map(desc => `<li>${desc}</li>`).join('')}
-            </div>
-        `;
-        experienceContainer.appendChild(experienceItem);
-    });
+    const experienceLeftContainer = document.getElementById('experienceLeft');
+    const experienceRightContainer = document.getElementById('experienceRight');
+
+    // Function to create skill elements
+    function createSkillsList(skills) {
+        return skills.map(skill => {
+            return `<span class="badge badge-pill badge-primary">${skill}</span>`;
+        }).join(' ');
+    }
+
+    // Display the first experience (on the left side)
+    const firstExp = experiences[0];
+    const firstExperienceItem = document.createElement('div');
+    firstExperienceItem.classList.add('experience-item');
+    firstExperienceItem.innerHTML = `
+        <div class="designation">${firstExp.designation}</div>
+        <div class="details">
+            <div class="company">${firstExp.company}</div>
+            <div class="date">${firstExp.date}</div>
+        </div>
+        <div class="description">
+            ${firstExp.description.split('\n').map(desc => `<li>${desc}</li>`).join('')}
+        </div>
+        <div class="skills">
+            <strong>Skills: </strong>
+            ${createSkillsList(firstExp.skills)}
+        </div>
+    `;
+    experienceLeftContainer.appendChild(firstExperienceItem);
+
+    // Display the second experience (on the right side)
+    const secondExp = experiences[1];
+    const secondExperienceItem = document.createElement('div');
+    secondExperienceItem.classList.add('experience-item');
+    secondExperienceItem.innerHTML = `
+        <div class="designation">${secondExp.designation}</div>
+        <div class="details">
+            <div class="company">${secondExp.company}</div>
+            <div class="date">${secondExp.date}</div>
+        </div>
+        <div class="description">
+            ${secondExp.description.split('\n').map(desc => `<li>${desc}</li>`).join('')}
+        </div>
+        <div class="skills">
+            <strong>Skills: </strong>
+            ${createSkillsList(secondExp.skills)}
+        </div>
+    `;
+    experienceRightContainer.appendChild(secondExperienceItem);
 }
 
 // Projects data
