@@ -444,3 +444,66 @@ header {
 .contact-heading {
     color: #131313; /* Set the color to white */
 }
+
+/* Experience Section Styles */
+.experience-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif; /* Fancy font */
+    color: #3f29be; /* Greenish color */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, #2f3ea9, #8BC34A); /* Gradient underline */
+    border-radius: 5px;
+}
+
+.section-title span {
+    color: #1b0718; /* Tomato color for company name */
+    font-weight: bold;
+    font-size: 3rem; /* Increased size for company name */
+}
+
+.section-title span.company-name {
+    font-size: 3rem; /* Making company name larger */
+    color: #1E90FF; /* Blue color for the company name */
+}
+
+.section-title .work-experience {
+    font-family: 'Cursive', sans-serif; /* Cursive font for Work Experience */
+    font-size: 2.5rem;
+    color: #4CAF50; /* Green color for Work Experience text */
+}
+
+@keyframes titleAnimation {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(50%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section-title {
+    animation: titleAnimation 1s ease-out;
+}
